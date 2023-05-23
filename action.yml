@@ -1,0 +1,22 @@
+name: 'アクションの名前'
+description: 'アクションの説明'
+branding:
+  icon: upload-cloud
+  color: blue
+inputs:
+  id_of_input:
+    description: '入力値の名前'
+    required: true # 必須かどうか
+    default: 'default value' # デフォルト値
+  id_of_input2:
+    description: '入力値の名前'
+    required: true # 必須かどうか
+    default: 'default value' # デフォルト値
+outputs:
+  id_of_output: # id of output
+    description: '出力値の名前'
+  id_of_output2: # id of output
+    description: '出力値の名前'
+runs:
+  using: 'node16'
+  main: 'index.js' # 実行するJavaScriptファイル
