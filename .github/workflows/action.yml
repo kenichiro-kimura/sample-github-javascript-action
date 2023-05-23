@@ -1,0 +1,14 @@
+on:
+    push:
+    workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name: test
+          uses: ./
+          with:
+            id_of_input: 'input value 1'
+            id_of_input2: 'input value 2'
