@@ -5,11 +5,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-        - name: checkout
-          uses: actions/checkout@v2
         - name: test
           id: test
-          uses: ./
+          uses: kenichiro-kimura/sample-github-javascript-action@cfc040796f706d3716a2c43e4cbf8eda821b4095
           with:
             id_of_input: 'input value 1'
             id_of_input2: 'input value 2'
