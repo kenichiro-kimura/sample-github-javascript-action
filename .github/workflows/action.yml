@@ -8,7 +8,12 @@ jobs:
         - name: checkout
           uses: actions/checkout@v2
         - name: test
+          id: test
           uses: ./
           with:
             id_of_input: 'input value 1'
             id_of_input2: 'input value 2'
+        - name: view result
+          run: \
+            echo ${{ steps.test.outputs.id_of_output }} \
+            echo ${{ steps.test.outputs.id_of_output2 }}
