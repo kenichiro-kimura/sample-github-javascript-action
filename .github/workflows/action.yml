@@ -19,4 +19,4 @@ jobs:
             echo ${{ env.id_of_output2 }}
           env:
             id_of_output: ${{ steps.test.outputs.id_of_output }}
-            id_of_output2: echo ${{ steps.test.outputs.id_of_output2 }}
+            id_of_output2: ${{ steps.test.outputs.id_of_output2 }}
