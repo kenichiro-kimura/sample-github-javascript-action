@@ -14,6 +14,9 @@ jobs:
             id_of_input: 'input value 1'
             id_of_input2: 'input value 2'
         - name: view result
-          run: \
-            echo ${{ steps.test.outputs.id_of_output }} \
-            echo ${{ steps.test.outputs.id_of_output2 }}
+          run: |
+            echo ${{ env.id_of_output }}
+            echo ${{ env.id_of_output2 }}
+          env:
+            id_of_output: ${{ steps.test.outputs.id_of_output }}
+            id_of_output2: echo ${{ steps.test.outputs.id_of_output2 }}
